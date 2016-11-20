@@ -1,0 +1,93 @@
+//render function return section
+<View style={styles.container}>
+  <Image style={styles.bg} source={{uri: 'https://farm5.staticflickr.com/4081/4933676801_c892e12a99_z.jpg'}} />
+
+  <View style={styles.header}>
+    <Image style={styles.mark} source={{uri: 'https://farm5.staticflickr.com/4081/4933676801_c892e12a99_z.jpg'}} />
+  </View>
+  <View style={styles.inputs}>
+    <View style={styles.inputContainer}>
+      <Image style={styles.inputUsername} source={{uri: 'https://farm5.staticflickr.com/4081/4933676801_c892e12a99_z.jpg'}}/>
+      <TextInput
+        style={[styles.input, styles.whiteFont]}
+        placeholder="Email"
+        placeholderTextColor="#FFF"
+        autoCapitalize="none"
+        returnKeyType="next"
+        onChangeText={(text)=>(this.onTypingUsername({text}))}
+        value={this.state.username}
+      />
+    </View>
+    <View style={styles.inputContainer}>
+      <Image style={styles.inputPassword} source={{uri: 'http://i.imgur.com/ON58SIG.png'}}/>
+      <TextInput
+        password={true}
+        style={[styles.input, styles.whiteFont]}
+        placeholder="Password"
+        placeholderTextColor="#FFF"
+        onChangeText={(text)=>(this.onTypingPassword({text}))}
+        value={this.state.password}
+        onSubmitEditing={this.login}
+      />
+    </View>
+    <View style={styles.forgotContainer}>
+      <Text style={styles.greyFont}>Forgot Password</Text>
+    </View>
+  </View>
+  <TouchableOpacity onPress={this.login} style={styles.signin}>
+    <Text style={styles.whiteFont}>Sign In</Text>
+  </TouchableOpacity>
+  <View style={styles.signup}>
+    <Text style={styles.greyFont}>Don't have an account?<Text style={styles.whiteFont}>  Sign Up</Text></Text>
+  </View>
+  <KeyboardSpacer/>
+</View>
+
+
+//style sheet
+
+<View style={styles.forgotContainer}>
+  <Text style={styles.greyFont}>Forgot Password</Text>
+</View>
+
+
+<Text style={styles.whiteFont}>  Login</Text>
+
+
+
+
+//commented content
+
+{/* <Image style={styles.bg} source={{uri: 'http://i.imgur.com/xlQ56UK.jpg'}} /> */}
+{/* <View style={styles.header}> */}
+{/* <Image style={styles.mark} source={{uri: 'https://farm5.staticflickr.com/4081/4933676801_c892e12a99_z.jpg'}} /> */}
+{/* </View> */}
+
+
+
+
+{/* <TouchableOpacity onPress={this.login} style={styles.signin}>
+  <Text style={styles.whiteFont}>Sign In</Text>
+</TouchableOpacity> */}
+{/* <View style={styles.signup}>
+  <Text style={styles.greyFont}>already have an account? </Text>
+  <TouchableOpacity onPress={this.login}>
+  <Text style={styles.whiteFont}>  Login</Text>
+  </TouchableOpacity>
+
+</View> */}
+
+
+
+//input
+input: {
+    flexDirection: 'row',
+    position: 'absolute',
+    padding: 10,
+    left: 61,
+    top: 15,
+    right: 0,
+    height: 10,
+    fontSize: 14,
+
+},
